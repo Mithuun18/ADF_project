@@ -1,0 +1,9 @@
+{
+	"name": "mithuunravi18-df",
+	"location": "australiaeast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d0125421-b99d-45f4-a187-f7a5a93179cd",
+		"tenantId": "4efcdee8-a9d0-455d-aa66-9a1dbcac4e19"
+	}
+}
