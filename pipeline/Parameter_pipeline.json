@@ -112,7 +112,26 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
@@ -133,6 +152,12 @@
 							}
 						}
 					}
+				],
+				"outputs": [
+					{
+						"referenceName": "parameter_dataset",
+						"type": "DatasetReference"
+					}
 				]
 			}
 		],
@@ -147,6 +172,9 @@
 				"type": "string"
 			},
 			"pp_Directory_out": {
+				"type": "string"
+			},
+			"pp_arche": {
 				"type": "string"
 			}
 		},
