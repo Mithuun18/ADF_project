@@ -14,9 +14,6 @@
 			},
 			"df_filename": {
 				"type": "string"
-			},
-			"df_arche": {
-				"type": "string"
 			}
 		},
 		"annotations": [],

@@ -156,7 +156,21 @@
 				"outputs": [
 					{
 						"referenceName": "parameter_dataset",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"df_filesystem": {
+								"value": "@pipeline().parameters.pp_filesystem",
+								"type": "Expression"
+							},
+							"df_Directory": {
+								"value": "@pipeline().parameters.pp_arche",
+								"type": "Expression"
+							},
+							"df_filename": {
+								"value": "@pipeline().parameters.pp_fileName",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
