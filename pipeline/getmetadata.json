@@ -154,11 +154,11 @@
 								"type": "Expression"
 							},
 							"df_Directory": {
-								"value": "@pipeline().parameters.pp_Directory",
+								"value": "@pipeline().parameters.pp_Directory_in",
 								"type": "Expression"
 							},
 							"df_filename": {
-								"value": "@pipeline().parameters.pp_filename_input",
+								"value": "@pipeline().parameters.pp_filename",
 								"type": "Expression"
 							}
 						}
@@ -174,11 +174,7 @@
 								"type": "Expression"
 							},
 							"df_Directory": {
-								"value": "@pipeline().parameters.pp_Directory",
-								"type": "Expression"
-							},
-							"df_filename": {
-								"value": "@pipeline().parameters.pp_filename_output",
+								"value": "@pipeline().parameters.pp_Directory_out",
 								"type": "Expression"
 							}
 						}
