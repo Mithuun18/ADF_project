@@ -190,13 +190,16 @@
 			"pp_filesystem": {
 				"type": "string"
 			},
-			"pp_Directory": {
+			"pp_Directory_in": {
 				"type": "string"
 			},
-			"pp_filename_input": {
+			"pp_Directory_out": {
 				"type": "string"
 			},
-			"pp_filename_output": {
+			"pp_filename": {
+				"type": "string"
+			},
+			"pp_arche": {
 				"type": "string"
 			}
 		},
