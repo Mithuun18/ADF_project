@@ -237,19 +237,24 @@
 		],
 		"parameters": {
 			"pp_filesystem": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "project"
 			},
 			"pp_Directory_in": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "input"
 			},
 			"pp_fileName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "SalesLTAddress"
 			},
 			"pp_Directory_out": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "output"
 			},
 			"pp_arche": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "arche"
 			}
 		},
 		"annotations": []
