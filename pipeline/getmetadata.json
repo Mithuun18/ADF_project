@@ -184,16 +184,20 @@
 		],
 		"parameters": {
 			"pp_filesystem": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "project"
 			},
 			"pp_Directory_in": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "input"
 			},
 			"pp_Directory_out": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "output"
 			},
 			"pp_filename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "SalesLTAddress.txt"
 			},
 			"pp_arche": {
 				"type": "string"
