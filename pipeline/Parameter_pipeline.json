@@ -79,10 +79,6 @@
 							"df_Directory": {
 								"value": "@pipeline().parameters.pp_Directory_out",
 								"type": "Expression"
-							},
-							"df_filename": {
-								"value": "@pipeline().parameters.pp_fileName",
-								"type": "Expression"
 							}
 						}
 					}
