@@ -246,7 +246,7 @@
 			},
 			"pp_fileName": {
 				"type": "string",
-				"defaultValue": "SalesLTAddress"
+				"defaultValue": "SalesLTAddress.txt"
 			},
 			"pp_Directory_out": {
 				"type": "string",
