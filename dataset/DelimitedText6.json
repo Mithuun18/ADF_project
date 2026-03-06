@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "SalesProduct_DB",
-				"folderPath": "input",
+				"fileName": "productconfig.csv",
+				"folderPath": "sql_input",
 				"fileSystem": "project"
 			},
 			"columnDelimiter": ",",
