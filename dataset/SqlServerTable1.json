@@ -73,8 +73,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "SalesLT",
-			"table": "selectedproduct_color"
+			"schema": "project",
+			"table": "config"
 		}
 	}
 }
