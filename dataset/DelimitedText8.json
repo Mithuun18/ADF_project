@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "SalesLTAddress.txt",
+				"fileName": "SalesLTAddress.csv",
 				"folderPath": "input",
 				"fileSystem": "project"
 			},
