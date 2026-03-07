@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText8",
+	"name": "DelimitedText9",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
@@ -14,7 +14,7 @@
 				"folderPath": "input",
 				"fileSystem": "project"
 			},
-			"columnDelimiter": "\t",
+			"columnDelimiter": ",",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
