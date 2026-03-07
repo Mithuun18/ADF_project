@@ -10,10 +10,11 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "SalesLTAddress.csv",
 				"folderPath": "input",
 				"fileSystem": "project"
 			},
-			"columnDelimiter": "\t",
+			"columnDelimiter": ",",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
