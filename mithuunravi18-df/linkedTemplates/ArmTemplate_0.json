@@ -1034,7 +1034,14 @@
 						"     postCommands: [],",
 						"     skipDuplicateMapInputs: true,",
 						"     skipDuplicateMapOutputs: true,",
-						"     saveOrder: 1) ~> sink1"
+						"     saveOrder: 1,",
+						"     mapColumn(",
+						"          City_final,",
+						"          StateProvince_final,",
+						"          CountryRegion_final,",
+						"          PostalCode_final,",
+						"          rowguid_final",
+						"     )) ~> sink1"
 					]
 				}
 			},
