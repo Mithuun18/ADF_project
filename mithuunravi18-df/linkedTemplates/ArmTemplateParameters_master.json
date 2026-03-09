@@ -8,8 +8,20 @@
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
+		"SqlServer1_password": {
+			"value": ""
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://mithuunadls.dfs.core.windows.net/"
+		},
+		"SqlServer1_properties_typeProperties_server": {
+			"value": "mithuunsqldb.database.windows.net"
+		},
+		"SqlServer1_properties_typeProperties_database": {
+			"value": "mithuunDB"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"value": "project"
 		},
 		"containerUri": {
 			"value": ""
