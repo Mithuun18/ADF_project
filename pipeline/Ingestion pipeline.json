@@ -13,9 +13,10 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
+				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "prac_dataflow1",
+						"referenceName": "dataflow1",
 						"type": "DataFlowReference"
 					},
 					"compute": {
