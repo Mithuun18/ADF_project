@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText9",
+	"name": "Dataflow_Sink",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "SalesLTAddress.txt",
+				"fileName": "SalesLTAddress.csv",
 				"folderPath": "input",
 				"fileSystem": "project"
 			},
