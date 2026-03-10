@@ -45,6 +45,7 @@
 						"value": "@activity('Lookup1').output.value",
 						"type": "Expression"
 					},
+					"isSequential": false,
 					"activities": [
 						{
 							"name": "Execute Pipeline1",
@@ -118,9 +119,9 @@
 							"type": "Script",
 							"dependsOn": [
 								{
-									"activity": "Audit_success",
+									"activity": "Execute Pipeline1",
 									"dependencyConditions": [
-										"Succeeded"
+										"Failed"
 									]
 								}
 							],
@@ -139,6 +140,11 @@
 							"typeProperties": {
 								"scripts": [
 									{
+										"parameters": [
+											{
+												"value": ""
+											}
+										],
 										"type": "Query",
 										"text": "INSERT INTO [project].[audit]\nvalues ('@{item().project}','@{item().filename}','FAILURE',CURRENT_TIMESTAMP)"
 									}
