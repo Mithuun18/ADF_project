@@ -140,11 +140,6 @@
 							"typeProperties": {
 								"scripts": [
 									{
-										"parameters": [
-											{
-												"value": ""
-											}
-										],
 										"type": "Query",
 										"text": "INSERT INTO [project].[audit]\nvalues ('@{item().project}','@{item().filename}','FAILURE',CURRENT_TIMESTAMP)"
 									}
