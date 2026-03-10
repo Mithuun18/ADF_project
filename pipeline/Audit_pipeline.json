@@ -55,7 +55,29 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"waitOnCompletion": true
+								"pipeline": {
+									"referenceName": "Parameter_pipeline",
+									"type": "PipelineReference"
+								},
+								"waitOnCompletion": true,
+								"parameters": {
+									"pp_filesystem": {
+										"value": "@item().src_cont",
+										"type": "Expression"
+									},
+									"pp_Directory_in": {
+										"value": "@item().src_dir\n",
+										"type": "Expression"
+									},
+									"pp_fileName": {
+										"value": "@item().filename",
+										"type": "Expression"
+									},
+									"pp_Directory_out": {
+										"value": "@item().tgt_dir",
+										"type": "Expression"
+									}
+								}
 							}
 						}
 					]
