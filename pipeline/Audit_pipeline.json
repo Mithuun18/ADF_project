@@ -79,6 +79,72 @@
 									}
 								}
 							}
+						},
+						{
+							"name": "Audit_success",
+							"type": "Script",
+							"dependsOn": [
+								{
+									"activity": "Execute Pipeline1",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"linkedServiceName": {
+								"referenceName": "SqlServer1",
+								"type": "LinkedServiceReference"
+							},
+							"typeProperties": {
+								"scripts": [
+									{
+										"type": "Query",
+										"text": "INSERT INTO [project].[audit]\nvalues ('@{item().project}','@{item().filename}','SUCCESS',CURRENT_TIMESTAMP)"
+									}
+								],
+								"scriptBlockExecutionTimeout": "02:00:00"
+							}
+						},
+						{
+							"name": "Audit_Failure",
+							"type": "Script",
+							"dependsOn": [
+								{
+									"activity": "Audit_success",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"linkedServiceName": {
+								"referenceName": "SqlServer1",
+								"type": "LinkedServiceReference"
+							},
+							"typeProperties": {
+								"scripts": [
+									{
+										"type": "Query",
+										"text": "INSERT INTO [project].[audit]\nvalues ('@{item().project}','@{item().filename}','FAILURE',CURRENT_TIMESTAMP)"
+									}
+								],
+								"scriptBlockExecutionTimeout": "02:00:00"
+							}
 						}
 					]
 				}
