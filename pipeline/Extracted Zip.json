@@ -171,10 +171,6 @@
 														"value": "@pipeline().parameters.poc_filesystem",
 														"type": "Expression"
 													},
-													"ex_directory": {
-														"value": "@pipeline().parameters.poc_Dic_extract",
-														"type": "Expression"
-													},
 													"ex_filename": {
 														"value": "@item().name",
 														"type": "Expression"
@@ -198,19 +194,16 @@
 		],
 		"parameters": {
 			"poc_Dic_others": {
-				"type": "string",
-				"defaultValue": "others"
+				"type": "string"
 			},
 			"poc_Dic_extract": {
 				"type": "string"
 			},
 			"poc_filesystem": {
-				"type": "string",
-				"defaultValue": "pocprj"
+				"type": "string"
 			},
 			"poc_sales": {
-				"type": "string",
-				"defaultValue": "sales"
+				"type": "string"
 			}
 		},
 		"annotations": []
