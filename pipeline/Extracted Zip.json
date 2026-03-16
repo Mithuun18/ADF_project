@@ -202,8 +202,7 @@
 				"defaultValue": "others"
 			},
 			"poc_Dic_extract": {
-				"type": "string",
-				"defaultValue": "extracted"
+				"type": "string"
 			},
 			"poc_filesystem": {
 				"type": "string",
