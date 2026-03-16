@@ -7,12 +7,10 @@
 		},
 		"parameters": {
 			"ex_filesystem": {
-				"type": "string",
-				"defaultValue": "pocprj"
+				"type": "string"
 			},
 			"ex_directory": {
-				"type": "string",
-				"defaultValue": "extracted"
+				"type": "string"
 			}
 		},
 		"annotations": [],
