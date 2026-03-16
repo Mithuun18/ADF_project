@@ -180,7 +180,7 @@
 										],
 										"outputs": [
 											{
-												"referenceName": "finExtract_data",
+												"referenceName": "DelimitedText10",
 												"type": "DatasetReference"
 											}
 										]
