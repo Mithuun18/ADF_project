@@ -8,6 +8,12 @@
 		"parameters": {
 			"ext_filename": {
 				"type": "string"
+			},
+			"ext_filesystem": {
+				"type": "string"
+			},
+			"ext_extract_dic": {
+				"type": "string"
 			}
 		},
 		"annotations": [],
