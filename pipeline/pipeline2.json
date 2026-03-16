@@ -163,7 +163,13 @@
 										"inputs": [
 											{
 												"referenceName": "DelimitedText15",
-												"type": "DatasetReference"
+												"type": "DatasetReference",
+												"parameters": {
+													"ext_filename": {
+														"value": "@item().name",
+														"type": "Expression"
+													}
+												}
 											}
 										],
 										"outputs": [
