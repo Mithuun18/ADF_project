@@ -198,16 +198,28 @@
 		],
 		"parameters": {
 			"poc_Dic_others": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "others"
 			},
 			"poc_Dic_extract": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "extracted"
 			},
 			"poc_filesystem": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "pocprj"
 			},
 			"poc_sales": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "sales"
+			},
+			"poc_Dic_extract_1": {
+				"type": "string",
+				"defaultValue": "AdventureWorksLTDEPOC.zip"
+			},
+			"poc_Dic_extract_2": {
+				"type": "string",
+				"defaultValue": "AdventureWorksLTDEPOC"
 			}
 		},
 		"annotations": []
