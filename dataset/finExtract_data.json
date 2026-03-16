@@ -6,9 +6,6 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"ex_filename": {
-				"type": "string"
-			},
 			"ex_filesystem": {
 				"type": "string",
 				"defaultValue": "pocprj"
@@ -23,10 +20,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().ex_filename",
-					"type": "Expression"
-				},
 				"folderPath": "extracted/AdventureWorksLTDEPOC.zip/AdventureWorksLTDEPOC",
 				"fileSystem": "pocprj"
 			},
