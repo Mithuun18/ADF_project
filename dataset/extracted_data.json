@@ -9,9 +9,6 @@
 			"ex_folderpath": {
 				"type": "string"
 			},
-			"ex_filename": {
-				"type": "string"
-			},
 			"ex_filesystem": {
 				"type": "string"
 			}
@@ -21,10 +18,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().ex_filename",
-					"type": "Expression"
-				},
 				"folderPath": {
 					"value": "@dataset().ex_folderpath",
 					"type": "Expression"
