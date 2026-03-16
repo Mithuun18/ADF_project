@@ -135,7 +135,6 @@
 												"type": "DelimitedTextSource",
 												"storeSettings": {
 													"type": "AzureBlobFSReadSettings",
-													"recursive": true,
 													"enablePartitionDiscovery": false
 												},
 												"formatSettings": {
@@ -171,7 +170,7 @@
 										],
 										"outputs": [
 											{
-												"referenceName": "DelimitedText11",
+												"referenceName": "DelimitedText12",
 												"type": "DatasetReference"
 											}
 										]
