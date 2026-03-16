@@ -173,7 +173,7 @@
 														"type": "Expression"
 													},
 													"ex_directory": {
-														"value": "@pipeline().parameters.poc_Dic_extract",
+														"value": "@pipeline().parameters.poc_Dic_extract_2",
 														"type": "Expression"
 													},
 													"ex_filename": "@item().name"
