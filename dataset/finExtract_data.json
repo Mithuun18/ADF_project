@@ -1,13 +1,21 @@
 {
-	"name": "DelimitedText10",
+	"name": "finExtract_data",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"Filename": {
+			"ex_filename": {
 				"type": "string"
+			},
+			"ex_filesystem": {
+				"type": "string",
+				"defaultValue": "pocprj"
+			},
+			"ex_directory": {
+				"type": "string",
+				"defaultValue": "extracted"
 			}
 		},
 		"annotations": [],
@@ -16,7 +24,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().Filename",
+					"value": "@dataset().ex_filename",
 					"type": "Expression"
 				},
 				"folderPath": "extracted/AdventureWorksLTDEPOC.zip/AdventureWorksLTDEPOC",
