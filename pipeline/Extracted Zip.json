@@ -81,6 +81,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -174,10 +175,6 @@
 													"ex_directory": {
 														"value": "@pipeline().parameters.poc_Dic_extract",
 														"type": "Expression"
-													},
-													"ex_filename": {
-														"value": "@item().name",
-														"type": "Expression"
 													}
 												}
 											}
@@ -185,7 +182,17 @@
 										"outputs": [
 											{
 												"referenceName": "finExtract_data",
-												"type": "DatasetReference"
+												"type": "DatasetReference",
+												"parameters": {
+													"ex_filesystem": {
+														"value": "@pipeline().parameters.poc_filesystem",
+														"type": "Expression"
+													},
+													"ex_directory": {
+														"value": "@pipeline().parameters.poc_sales",
+														"type": "Expression"
+													}
+												}
 											}
 										]
 									}
