@@ -175,7 +175,8 @@
 													"ex_directory": {
 														"value": "@pipeline().parameters.poc_Dic_extract",
 														"type": "Expression"
-													}
+													},
+													"ex_filename": "@item().name"
 												}
 											}
 										],
