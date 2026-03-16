@@ -11,6 +11,10 @@
 			},
 			"ex_filesystem": {
 				"type": "string"
+			},
+			"ex_filename": {
+				"type": "string",
+				"defaultValue": "AdventureWorksLTDEPOC.zip"
 			}
 		},
 		"annotations": [],
@@ -18,6 +22,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().ex_filename",
+					"type": "Expression"
+				},
 				"folderPath": {
 					"value": "@dataset().ex_folderpath",
 					"type": "Expression"
