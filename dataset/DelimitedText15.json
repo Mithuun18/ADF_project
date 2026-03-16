@@ -25,8 +25,14 @@
 					"value": "@dataset().ext_filename",
 					"type": "Expression"
 				},
-				"folderPath": "extracted/AdventureWorksLTDEPOC",
-				"fileSystem": "pocprj"
+				"folderPath": {
+					"value": "@dataset().ext_extract_dic",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().ext_filesystem",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
