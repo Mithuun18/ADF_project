@@ -112,7 +112,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@and(\n    startswith(item().name,'SalesLT' ), \n    endswith(item().name,'.txt' )\n)",
+									"value": "@and(\n    startswith(item().name,'SalesLT'), \n    endswith(item().name,'.txt')\n)",
 									"type": "Expression"
 								},
 								"ifTrueActivities": [
@@ -175,25 +175,6 @@
 										]
 									}
 								]
-							}
-						},
-						{
-							"name": "If Condition2",
-							"type": "IfCondition",
-							"dependsOn": [
-								{
-									"activity": "If Condition1",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								}
-							],
-							"userProperties": [],
-							"typeProperties": {
-								"expression": {
-									"value": "@or(\r\n    endsWith(item().name,'.json'),\r\n    or(\r\n        endsWith(item().name,'.xml'),\r\n        endsWith(item().name,'png')\r\n    )\r\n)",
-									"type": "Expression"
-								}
 							}
 						}
 					]
