@@ -192,7 +192,8 @@
 													"ex_directory": {
 														"value": "@pipeline().parameters.poc_sales",
 														"type": "Expression"
-													}
+													},
+													"ex_filename": "@item().name"
 												}
 											}
 										]
