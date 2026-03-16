@@ -51,6 +51,10 @@
 							"ex_folderpath": {
 								"value": "@pipeline().parameters.poc_Dic_sales",
 								"type": "Expression"
+							},
+							"ex_filesystem": {
+								"value": "@pipeline().parameters.poc_filesystem",
+								"type": "Expression"
 							}
 						}
 					}
