@@ -13,6 +13,10 @@
 				"fileName": "AdventureWorksLTDEPOC.zip",
 				"folderPath": "source",
 				"fileSystem": "pocprj"
+			},
+			"compression": {
+				"type": "ZipDeflate",
+				"level": "Fastest"
 			}
 		}
 	}

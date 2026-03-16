@@ -1,5 +1,5 @@
 {
-	"name": "pipeline2",
+	"name": "Extracted Zip",
 	"properties": {
 		"activities": [
 			{
@@ -22,7 +22,21 @@
 							"recursive": true
 						},
 						"formatSettings": {
-							"type": "BinaryReadSettings"
+							"type": "BinaryReadSettings",
+							"compressionProperties": {
+								"type": "ZipDeflateReadSettings"
+							}
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
 						}
 					},
 					"enableStaging": false
@@ -30,6 +44,12 @@
 				"inputs": [
 					{
 						"referenceName": "DS_Source_Zip",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "extracted_data",
 						"type": "DatasetReference"
 					}
 				]
