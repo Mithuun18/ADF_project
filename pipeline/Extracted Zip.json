@@ -171,6 +171,10 @@
 														"value": "@pipeline().parameters.poc_filesystem",
 														"type": "Expression"
 													},
+													"ex_directory": {
+														"value": "@pipeline().parameters.poc_Dic_extract",
+														"type": "Expression"
+													},
 													"ex_filename": {
 														"value": "@item().name",
 														"type": "Expression"
@@ -180,7 +184,7 @@
 										],
 										"outputs": [
 											{
-												"referenceName": "DelimitedText10",
+												"referenceName": "finExtract_data",
 												"type": "DatasetReference"
 											}
 										]
