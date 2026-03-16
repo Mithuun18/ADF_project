@@ -55,6 +55,24 @@
 				]
 			}
 		],
+		"parameters": {
+			"poc_source": {
+				"type": "string",
+				"defaultValue": "source"
+			},
+			"poc_sales": {
+				"type": "string",
+				"defaultValue": "sales"
+			},
+			"poc_others": {
+				"type": "string",
+				"defaultValue": "others"
+			},
+			"poc_extracted": {
+				"type": "string",
+				"defaultValue": "extracted"
+			}
+		},
 		"annotations": []
 	}
 }
