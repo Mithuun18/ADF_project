@@ -131,7 +131,7 @@
 												"type": "DelimitedTextSource",
 												"storeSettings": {
 													"type": "AzureBlobFSReadSettings",
-													"fileListPath": "pocprj/extracted/AdventureWorksLTDEPOC.zip/AdventureWorksLTDEPOC",
+													"recursive": true,
 													"enablePartitionDiscovery": false
 												},
 												"formatSettings": {
