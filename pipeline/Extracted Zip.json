@@ -134,14 +134,6 @@
 												"storeSettings": {
 													"type": "AzureBlobFSReadSettings",
 													"recursive": true,
-													"wildcardFolderPath": {
-														"value": "@pipeline().parameters.poc_Dic_extract",
-														"type": "Expression"
-													},
-													"wildcardFileName": {
-														"value": "@item().name",
-														"type": "Expression"
-													},
 													"enablePartitionDiscovery": false
 												},
 												"formatSettings": {
@@ -172,7 +164,10 @@
 										"inputs": [
 											{
 												"referenceName": "DelimitedText10",
-												"type": "DatasetReference"
+												"type": "DatasetReference",
+												"parameters": {
+													"ex_filename": "@item().name"
+												}
 											}
 										],
 										"outputs": [
