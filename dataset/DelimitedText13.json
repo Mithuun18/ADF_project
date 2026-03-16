@@ -5,20 +5,11 @@
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"Ext_filename": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().Ext_filename",
-					"type": "Expression"
-				},
 				"folderPath": "extracted/AdventureWorksLTDEPOC",
 				"fileSystem": "pocprj"
 			},
