@@ -165,36 +165,14 @@
 										},
 										"inputs": [
 											{
-												"referenceName": "finExtract_data",
-												"type": "DatasetReference",
-												"parameters": {
-													"ex_filesystem": {
-														"value": "@pipeline().parameters.poc_filesystem",
-														"type": "Expression"
-													},
-													"ex_directory": {
-														"value": "@pipeline().parameters.poc_Dic_extract_2",
-														"type": "Expression"
-													},
-													"ex_filename": "@item().name"
-												}
+												"referenceName": "DelimitedText10",
+												"type": "DatasetReference"
 											}
 										],
 										"outputs": [
 											{
-												"referenceName": "finExtract_data",
-												"type": "DatasetReference",
-												"parameters": {
-													"ex_filesystem": {
-														"value": "@pipeline().parameters.poc_filesystem",
-														"type": "Expression"
-													},
-													"ex_directory": {
-														"value": "@pipeline().parameters.poc_sales",
-														"type": "Expression"
-													},
-													"ex_filename": "@item().name"
-												}
+												"referenceName": "DelimitedText11",
+												"type": "DatasetReference"
 											}
 										]
 									}

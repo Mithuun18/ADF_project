@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText10",
+	"name": "DelimitedText11",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "extracted/AdventureWorksLTDEPOC.zip/AdventureWorksLTDEPOC",
+				"folderPath": "sales",
 				"fileSystem": "pocprj"
 			},
 			"columnDelimiter": ",",
