@@ -71,7 +71,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "extracted_data",
+						"referenceName": "DelimitedText13",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -82,7 +82,7 @@
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
-						"type": "BinaryReadSettings"
+						"type": "DelimitedTextReadSettings"
 					}
 				}
 			}
