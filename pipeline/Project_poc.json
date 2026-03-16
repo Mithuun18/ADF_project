@@ -139,12 +139,65 @@
 													"type": "DelimitedTextReadSettings"
 												}
 											},
-											"enableStaging": false
+											"sink": {
+												"type": "DelimitedTextSink",
+												"storeSettings": {
+													"type": "AzureBlobFSWriteSettings"
+												},
+												"formatSettings": {
+													"type": "DelimitedTextWriteSettings",
+													"quoteAllText": true,
+													"fileExtension": ".txt"
+												}
+											},
+											"enableStaging": false,
+											"translator": {
+												"type": "TabularTranslator",
+												"typeConversion": true,
+												"typeConversionSettings": {
+													"allowDataTruncation": true,
+													"treatBooleanAsNumber": false
+												}
+											}
 										},
 										"inputs": [
 											{
 												"referenceName": "DelimitedText15",
-												"type": "DatasetReference"
+												"type": "DatasetReference",
+												"parameters": {
+													"ext_filename": {
+														"value": "@item().name",
+														"type": "Expression"
+													},
+													"ext_filesystem": {
+														"value": "@pipeline().parameters.poc_filesystem",
+														"type": "Expression"
+													},
+													"ext_extract_dic": {
+														"value": "@pipeline().parameters.poc_extract_dic",
+														"type": "Expression"
+													}
+												}
+											}
+										],
+										"outputs": [
+											{
+												"referenceName": "DelimitedText15",
+												"type": "DatasetReference",
+												"parameters": {
+													"ext_filename": {
+														"value": "@item().name",
+														"type": "Expression"
+													},
+													"ext_filesystem": {
+														"value": "@pipeline().parameters.poc_filesystem",
+														"type": "Expression"
+													},
+													"ext_extract_dic": {
+														"value": "@if(and(startsWith(item().name,'SalesLT'), endsWith(item().name,'.txt')), 'sales', 'others')",
+														"type": "Expression"
+													}
+												}
 											}
 										]
 									}
