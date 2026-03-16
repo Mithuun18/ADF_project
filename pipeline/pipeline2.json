@@ -162,10 +162,10 @@
 										},
 										"inputs": [
 											{
-												"referenceName": "DelimitedText13",
+												"referenceName": "DelimitedText15",
 												"type": "DatasetReference",
 												"parameters": {
-													"Ext_filename": {
+													"ext_filename": {
 														"value": "@item().name",
 														"type": "Expression"
 													}
