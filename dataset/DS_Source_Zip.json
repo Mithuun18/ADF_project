@@ -1,0 +1,19 @@
+{
+	"name": "DS_Source_Zip",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "AdventureWorksLTDEPOC.zip",
+				"folderPath": "source",
+				"fileSystem": "pocprj"
+			}
+		}
+	}
+}
