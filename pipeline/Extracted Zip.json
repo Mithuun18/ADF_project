@@ -135,6 +135,12 @@
 												"type": "DelimitedTextSource",
 												"storeSettings": {
 													"type": "AzureBlobFSReadSettings",
+													"recursive": true,
+													"wildcardFolderPath": {
+														"value": "@pipeline().parameters.poc_Dic_extract",
+														"type": "Expression"
+													},
+													"wildcardFileName": "*",
 													"enablePartitionDiscovery": false
 												},
 												"formatSettings": {
