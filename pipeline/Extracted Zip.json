@@ -19,7 +19,8 @@
 						"type": "BinarySource",
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
-							"recursive": true
+							"recursive": true,
+							"deleteFilesAfterCompletion": false
 						},
 						"formatSettings": {
 							"type": "BinaryReadSettings",
@@ -45,13 +46,25 @@
 				"outputs": [
 					{
 						"referenceName": "extracted_data",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"ex_folderpath": {
+								"value": "@pipeline().parameters.poc_Dic_sales",
+								"type": "Expression"
+							},
+							"ex_filesystem": {
+								"value": "@pipeline().parameters.poc_filesystem",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			},
 			{
 				"name": "Get Metadata1",
 				"type": "GetMetadata",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Copy data1",
@@ -88,6 +101,8 @@
 			{
 				"name": "ForEach1",
 				"type": "ForEach",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Get Metadata1",
@@ -186,21 +201,25 @@
 			}
 		],
 		"parameters": {
-			"poc_source": {
+			"poc_Dic_source": {
 				"type": "string",
 				"defaultValue": "source"
 			},
-			"poc_sales": {
+			"poc_Dic_sales": {
 				"type": "string",
 				"defaultValue": "sales"
 			},
-			"poc_others": {
+			"poc_Dic_others": {
 				"type": "string",
 				"defaultValue": "others"
 			},
-			"poc_extracted": {
+			"poc_Dic_folder": {
 				"type": "string",
 				"defaultValue": "extracted"
+			},
+			"poc_filesystem": {
+				"type": "string",
+				"defaultValue": "pocprj"
 			}
 		},
 		"annotations": []
