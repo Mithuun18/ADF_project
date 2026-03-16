@@ -5,35 +5,13 @@
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"ex_folderpath": {
-				"type": "string"
-			},
-			"ex_filesystem": {
-				"type": "string"
-			},
-			"ex_filename": {
-				"type": "string",
-				"defaultValue": "AdventureWorksLTDEPOC.zip"
-			}
-		},
 		"annotations": [],
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().ex_filename",
-					"type": "Expression"
-				},
-				"folderPath": {
-					"value": "@dataset().ex_folderpath",
-					"type": "Expression"
-				},
-				"fileSystem": {
-					"value": "@dataset().ex_filesystem",
-					"type": "Expression"
-				}
+				"folderPath": "extracted",
+				"fileSystem": "pocprj"
 			}
 		}
 	}
