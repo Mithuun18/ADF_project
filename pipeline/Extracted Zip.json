@@ -46,21 +46,7 @@
 				"outputs": [
 					{
 						"referenceName": "extracted_data",
-						"type": "DatasetReference",
-						"parameters": {
-							"ex_folderpath": {
-								"value": "@pipeline().parameters.poc_Dic_extract",
-								"type": "Expression"
-							},
-							"ex_filesystem": {
-								"value": "@pipeline().parameters.poc_filesystem",
-								"type": "Expression"
-							},
-							"ex_filename": {
-								"value": "@pipeline().parameters.poc_Dic_ext_filename",
-								"type": "Expression"
-							}
-						}
+						"type": "DatasetReference"
 					}
 				]
 			},
@@ -205,14 +191,6 @@
 			}
 		],
 		"parameters": {
-			"poc_Dic_source": {
-				"type": "string",
-				"defaultValue": "source"
-			},
-			"poc_Dic_sales": {
-				"type": "string",
-				"defaultValue": "sales"
-			},
 			"poc_Dic_others": {
 				"type": "string",
 				"defaultValue": "others"
@@ -224,9 +202,6 @@
 			"poc_filesystem": {
 				"type": "string",
 				"defaultValue": "pocprj"
-			},
-			"poc_Dic_ext_filename": {
-				"type": "string"
 			}
 		},
 		"annotations": []
