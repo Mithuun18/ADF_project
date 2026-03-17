@@ -232,35 +232,6 @@
 										]
 									},
 									{
-										"name": "Script1",
-										"type": "Script",
-										"dependsOn": [],
-										"policy": {
-											"timeout": "0.12:00:00",
-											"retry": 0,
-											"retryIntervalInSeconds": 30,
-											"secureOutput": false,
-											"secureInput": false
-										},
-										"userProperties": [],
-										"linkedServiceName": {
-											"referenceName": "SqlServer1",
-											"type": "LinkedServiceReference"
-										},
-										"typeProperties": {
-											"scripts": [
-												{
-													"type": "Query",
-													"text": {
-														"value": "INSERT INTO project.audit_file_log (file_name, status, folder, execution_time)\nVALUES (\n    '@{item().name}',\n    '@{variables('status')}',\n    '@{variables('folder')}',\n    GETDATE()\n);",
-														"type": "Expression"
-													}
-												}
-											],
-											"scriptBlockExecutionTimeout": "02:00:00"
-										}
-									},
-									{
 										"name": "Set_Status_Processed",
 										"type": "SetVariable",
 										"dependsOn": [],
@@ -286,6 +257,32 @@
 										"typeProperties": {
 											"variableName": "folder",
 											"value": "@if(and(startsWith(item().name,'SalesLT'), endsWith(item().name,'.txt')),'Sales','Others')"
+										}
+									},
+									{
+										"name": "Script1",
+										"type": "Script",
+										"dependsOn": [],
+										"policy": {
+											"timeout": "0.12:00:00",
+											"retry": 0,
+											"retryIntervalInSeconds": 30,
+											"secureOutput": false,
+											"secureInput": false
+										},
+										"userProperties": [],
+										"linkedServiceName": {
+											"referenceName": "SqlServer1",
+											"type": "LinkedServiceReference"
+										},
+										"typeProperties": {
+											"scripts": [
+												{
+													"type": "Query",
+													"text": "INSERT INTO project.audit_file_log (file_name, status, folder, execution_time)\nVALUES (\n    '@{item().name}',\n    '@{variables('status')}',\n    '@{variables('folder')}',\n    GETDATE()\n);"
+												}
+											],
+											"scriptBlockExecutionTimeout": "02:00:00"
 										}
 									}
 								]
