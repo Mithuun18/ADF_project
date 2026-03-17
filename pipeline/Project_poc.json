@@ -114,6 +114,36 @@
 									"value": "@not(\n    or(\n        endsWith(item().name,'.json'), \n        or(\n            endsWith(item().name,'.xml'), \n            endsWith(item().name,'.png')\n        )\n    )\n)",
 									"type": "Expression"
 								},
+								"ifFalseActivities": [
+									{
+										"name": "Set variable5",
+										"type": "SetVariable",
+										"dependsOn": [],
+										"policy": {
+											"secureOutput": false,
+											"secureInput": false
+										},
+										"userProperties": [],
+										"typeProperties": {
+											"variableName": "status",
+											"value": "Skipped"
+										}
+									},
+									{
+										"name": "Set variable6",
+										"type": "SetVariable",
+										"dependsOn": [],
+										"policy": {
+											"secureOutput": false,
+											"secureInput": false
+										},
+										"userProperties": [],
+										"typeProperties": {
+											"variableName": "folder",
+											"value": ""
+										}
+									}
+								],
 								"ifTrueActivities": [
 									{
 										"name": "Copy data2",
@@ -222,7 +252,7 @@
 												{
 													"type": "Query",
 													"text": {
-														"value": "INSERT INTO project.audit_file_log (file_name, status, folder, execution_time)\nVALUES (\n    '@{item().name}', \n    'Skipped', \n    'Restricted', \n    GETDATE()\n);",
+														"value": "INSERT INTO project.audit_file_log (file_name, status, folder, execution_time)\nVALUES (\n    '@{item().name}', \n    '@{variables('status')}', \n    '@{variables('folder')}', \n    GETDATE()\n);",
 														"type": "Expression"
 													}
 												}
