@@ -257,7 +257,7 @@
 										"typeProperties": {
 											"variableName": "folder",
 											"value": {
-												"value": "@if(\n    and(\n        startsWith(item().name,'SalesLT'),\n        endsWith(item().name,'.txt')\n    ),\n    'Sales',\n    'Others'\n)",
+												"value": "@if(\n    and(\n        startsWith(item().name,'SalesLT'),\n        endsWith(item().name,'.txt')\n    ),\n    'sales',\n    'others'\n)",
 												"type": "Expression"
 											}
 										}
