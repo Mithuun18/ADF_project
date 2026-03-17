@@ -229,6 +229,34 @@
 											],
 											"scriptBlockExecutionTimeout": "02:00:00"
 										}
+									},
+									{
+										"name": "Set variable1",
+										"type": "SetVariable",
+										"dependsOn": [],
+										"policy": {
+											"secureOutput": false,
+											"secureInput": false
+										},
+										"userProperties": [],
+										"typeProperties": {
+											"variableName": "status",
+											"value": "processed"
+										}
+									},
+									{
+										"name": "Set variable2",
+										"type": "SetVariable",
+										"dependsOn": [],
+										"policy": {
+											"secureOutput": false,
+											"secureInput": false
+										},
+										"userProperties": [],
+										"typeProperties": {
+											"variableName": "folder",
+											"value": "sales"
+										}
 									}
 								]
 							}
@@ -253,6 +281,17 @@
 			"poc_others": {
 				"type": "string",
 				"defaultValue": "others"
+			}
+		},
+		"variables": {
+			"Sales": {
+				"type": "String"
+			},
+			"status": {
+				"type": "String"
+			},
+			"folder": {
+				"type": "String"
 			}
 		},
 		"annotations": []
