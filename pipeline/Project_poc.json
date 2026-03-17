@@ -252,7 +252,7 @@
 												{
 													"type": "Query",
 													"text": {
-														"value": "INSERT INTO project.audit_file_log (file_name, status, folder, execution_time)\nVALUES (\n    '@{item().name}', \n    '@{variables('status')}', \n    '@{variables('folder')}', \n    GETDATE()\n);",
+														"value": "INSERT INTO project.audit_file_log (file_name, status, folder, execution_time)\nVALUES (\n    '@{item().name}',\n    '@{variables('status')}',\n    '@{variables('folder')}',\n    GETDATE()\n);",
 														"type": "Expression"
 													}
 												}
