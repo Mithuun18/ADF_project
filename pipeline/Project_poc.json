@@ -261,7 +261,7 @@
 										}
 									},
 									{
-										"name": "Set variable3",
+										"name": "Set_Status_Processed",
 										"type": "SetVariable",
 										"dependsOn": [],
 										"policy": {
@@ -275,7 +275,7 @@
 										}
 									},
 									{
-										"name": "Set variable4",
+										"name": "Set_Folder",
 										"type": "SetVariable",
 										"dependsOn": [],
 										"policy": {
@@ -285,7 +285,7 @@
 										"userProperties": [],
 										"typeProperties": {
 											"variableName": "folder",
-											"value": ""
+											"value": "@if(and(startsWith(item().name,'SalesLT'), endsWith(item().name,'.txt')),'Sales','Others')"
 										}
 									}
 								]
