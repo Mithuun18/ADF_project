@@ -293,34 +293,6 @@
 						}
 					]
 				}
-			},
-			{
-				"name": "Set variable1",
-				"type": "SetVariable",
-				"dependsOn": [],
-				"policy": {
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"variableName": "status",
-					"value": ""
-				}
-			},
-			{
-				"name": "Set variable2",
-				"type": "SetVariable",
-				"dependsOn": [],
-				"policy": {
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"variableName": "folder",
-					"value": ""
-				}
 			}
 		],
 		"parameters": {
@@ -342,9 +314,6 @@
 			}
 		},
 		"variables": {
-			"Sales": {
-				"type": "String"
-			},
 			"status": {
 				"type": "String"
 			},
