@@ -235,6 +235,8 @@
 									{
 										"name": "Set_Status_Processed",
 										"type": "SetVariable",
+										"state": "Inactive",
+										"onInactiveMarkAs": "Succeeded",
 										"dependsOn": [],
 										"policy": {
 											"secureOutput": false,
@@ -249,6 +251,8 @@
 									{
 										"name": "Set_Folder",
 										"type": "SetVariable",
+										"state": "Inactive",
+										"onInactiveMarkAs": "Succeeded",
 										"dependsOn": [],
 										"policy": {
 											"secureOutput": false,
@@ -284,7 +288,7 @@
 												{
 													"type": "Query",
 													"text": {
-														"value": "@concat(\n  'INSERT INTO project.audit_file_log (file_name, status, folder, execution_time) VALUES (''',\n  item().name, ''',''',\n  'Success', ''',''',\n  item().folderPath, ''', GETDATE())'\n)",
+														"value": "@concat(\n  'INSERT INTO project.audit_file_log (file_name, execution_time) VALUES (''',\n  item().name, ''',''',\n  utcNow(), ''')'\n)",
 														"type": "Expression"
 													}
 												}
