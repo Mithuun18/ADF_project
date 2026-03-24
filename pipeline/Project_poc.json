@@ -115,36 +115,6 @@
 									"value": "@not(\n    or(\n        endsWith(item().name,'.json'), \n        or(\n            endsWith(item().name,'.xml'), \n            endsWith(item().name,'.png')\n        )\n    )\n)",
 									"type": "Expression"
 								},
-								"ifFalseActivities": [
-									{
-										"name": "Set variable5",
-										"type": "SetVariable",
-										"dependsOn": [],
-										"policy": {
-											"secureOutput": false,
-											"secureInput": false
-										},
-										"userProperties": [],
-										"typeProperties": {
-											"variableName": "status",
-											"value": "Skipped"
-										}
-									},
-									{
-										"name": "Set variable6",
-										"type": "SetVariable",
-										"dependsOn": [],
-										"policy": {
-											"secureOutput": false,
-											"secureInput": false
-										},
-										"userProperties": [],
-										"typeProperties": {
-											"variableName": "folder",
-											"value": "Restricted"
-										}
-									}
-								],
 								"ifTrueActivities": [
 									{
 										"name": "Copy data2",
