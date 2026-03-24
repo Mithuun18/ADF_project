@@ -239,7 +239,7 @@
 												{
 													"type": "Query",
 													"text": {
-														"value": "activity('Copy data2').output\nINSERT INTO ProjectSchema.AuditLog (FileName, ExecutionTimestamp)\nVALUES ('@{item().name}', @utcNow());",
+														"value": "INSERT INTO ProjectSchema.AuditLog (FileName, ExecutionTimestamp)\nVALUES (@FileName, @ExecutionTimestamp);",
 														"type": "Expression"
 													}
 												}
