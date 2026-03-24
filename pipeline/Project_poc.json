@@ -205,9 +205,14 @@
 									{
 										"name": "Script1",
 										"type": "Script",
-										"state": "Inactive",
-										"onInactiveMarkAs": "Succeeded",
-										"dependsOn": [],
+										"dependsOn": [
+											{
+												"activity": "Copy data2",
+												"dependencyConditions": [
+													"Succeeded"
+												]
+											}
+										],
 										"policy": {
 											"timeout": "0.12:00:00",
 											"retry": 0,
@@ -225,7 +230,7 @@
 												{
 													"type": "Query",
 													"text": {
-														"value": "INSERT INTO ProjectSchema.AuditLog (FileName, ExecutionTimestamp)\nVALUES (@FileName, @ExecutionTimestamp);",
+														"value": "@concat(\n'Insert into project.audit2 values (''',\nitem().name,\n''', current_timestamp)'\n)",
 														"type": "Expression"
 													}
 												}
