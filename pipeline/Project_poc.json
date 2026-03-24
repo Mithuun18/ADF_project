@@ -233,41 +233,6 @@
 										]
 									},
 									{
-										"name": "Set_Status_Processed",
-										"type": "SetVariable",
-										"state": "Inactive",
-										"onInactiveMarkAs": "Succeeded",
-										"dependsOn": [],
-										"policy": {
-											"secureOutput": false,
-											"secureInput": false
-										},
-										"userProperties": [],
-										"typeProperties": {
-											"variableName": "status",
-											"value": "processed"
-										}
-									},
-									{
-										"name": "Set_Folder",
-										"type": "SetVariable",
-										"state": "Inactive",
-										"onInactiveMarkAs": "Succeeded",
-										"dependsOn": [],
-										"policy": {
-											"secureOutput": false,
-											"secureInput": false
-										},
-										"userProperties": [],
-										"typeProperties": {
-											"variableName": "folder",
-											"value": {
-												"value": "@if(\n    and(\n        startsWith(item().name,'SalesLT'),\n        endsWith(item().name,'.txt')\n    ),\n    'sales',\n    'others'\n)",
-												"type": "Expression"
-											}
-										}
-									},
-									{
 										"name": "Script1",
 										"type": "Script",
 										"dependsOn": [],
