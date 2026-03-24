@@ -220,7 +220,16 @@
 											"secureOutput": false,
 											"secureInput": false
 										},
-										"userProperties": [],
+										"userProperties": [
+											{
+												"name": "FileName",
+												"value": "@item().name"
+											},
+											{
+												"name": "ExecutionTimestamp",
+												"value": "@utcNow()"
+											}
+										],
 										"linkedServiceName": {
 											"referenceName": "SqlServer1",
 											"type": "LinkedServiceReference"
@@ -230,7 +239,7 @@
 												{
 													"type": "Query",
 													"text": {
-														"value": "INSERT INTO ProjectSchema.AuditLog (FileName, ExecutionTimestamp)\nVALUES ('@{item().name}', @utcNow());",
+														"value": "activity('Copy data2').output\nINSERT INTO ProjectSchema.AuditLog (FileName, ExecutionTimestamp)\nVALUES ('@{item().name}', @utcNow());",
 														"type": "Expression"
 													}
 												}
