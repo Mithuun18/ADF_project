@@ -230,7 +230,7 @@
 												{
 													"type": "Query",
 													"text": {
-														"value": "@concat(\n'Insert into project.audit2 values (''',\nitem().name,\n''', current_timestamp)'\n)",
+														"value": "@concat(\n'Insert into project.audit_file_log values (''',\nitem().name,\n''', current_timestamp)'\n)",
 														"type": "Expression"
 													}
 												}
